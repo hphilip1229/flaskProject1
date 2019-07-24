@@ -1,13 +1,39 @@
 <html>
     <head>
+         <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
         <title>Welcome!</title>
     </head>
     <body>
-        <h1>Hello world!</h1>
+        <h1>Hello {{user.name}}!</h1>
         <p>We can build a full webpage here</p>
         <form>
             <input type="text" name="nickname" value="Enter your nickname"/>
             <input type="submit" value="Submit"/>
+             <div class="row">
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-image">
+          <img src="https://media0.giphy.com/media/lMVNl6XxTvXgs/giphy.gif?cid=790b76115d371ed2366c536132c32a9e&rid=giphy.gif" height=auto width="50">
+        </div>
+        <div class="card-content">
+          <p>I am ready to start my new website.</p>
+        </div>
+      </div>
+    </div>
+  </div>
         </form>
+        <form method="post" action="/sendBreakfast">
+  <label for="nickname">What's your nickname?</label>
+  <input type='text' name='nickname'>
+  <label for="breakfast">What did you have for breakfast?</label>
+  <input type='text' name='breakfast'>
+  <input type='submit'>
+</form>
+        <a href="/secret">Go to secret page.</a>
     </body>
 </html>
